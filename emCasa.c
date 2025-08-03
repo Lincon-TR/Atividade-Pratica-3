@@ -8,6 +8,7 @@
  */
 
 void armazena( struct TreeNode* root, int *vetor, int *i);
+struct TreeNode* criaArvore( int *vetor, int inicio, int fim );
 
 struct TreeNode* balanceBST( struct TreeNode* root ) {
     int vetor[10000];
@@ -40,4 +41,5 @@ struct TreeNode* criaArvore( int *vetor, int inicio, int fim ) {
     novo->left = criaArvore( vetor, inicio, meio - 1 );
     novo->right = criaArvore ( vetor, meio + 1, fim );
     return novo;
+
 }
